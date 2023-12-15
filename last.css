@@ -1,0 +1,144 @@
+.body3{
+    margin: 0;
+    padding: 0;
+    background-image: url(./last\ page.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    font-family: Verdana, sans-serif;
+}
+/* giving background image */
+.playagainbutton{
+    padding: 5px 10px 5px 10px;
+    font-size:15px;
+    background-color: rgb(238, 44, 44);
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    height: 70px;
+    width: 150px;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+}
+/* play again button styling  */
+#score{
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 50px;
+    font-family: Verdana, sans-serif;
+    position: relative;
+}
+#cake{
+    margin-left: 600px;
+}
+/* score styling */
+#appreciate{
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+}
+/* random sentence styling */
+.bird{
+    top: 60px;
+    left: 0;
+    position: absolute;
+    animation-iteration-count: 1;
+}
+/* bird image styling */
+.cherry{
+    top: 145px;
+    left: 50px;
+    position: absolute;
+    visibility: hidden;
+    animation-iteration-count: 1;
+}
+/* cherry image styling */
+#volumebtn{
+    cursor: pointer;
+    position: absolute;
+    margin-top: 8px;
+    margin-right: 580px;
+}
+/* volume button styling */
+#number{
+    font-size: 30px;
+    border: 1px solid white;
+    padding: 10px 10px 10px 10px;
+   margin-top: 150px;
+    color: rgb(238, 44, 44);
+    font-weight: 600;
+    background-color: white;
+}
+/* Your score styling */
+.chocolate{
+    display: flex;
+}
+@keyframes fly{
+    100%{left: 43%;
+          top: 75%;}
+}  
+/* animation to make cherry fly along with the bird */
+@keyframes stay{
+    0%{top: 25%;}
+    100%{top: 53%;}  
+}
+/* animation to drop the cherry */
+@keyframes flyaway{
+    100%{left: 100%;}
+}
+/* animation to make bird fly fron start to end */
+/* makes responsive */
+@media only screen and (min-width : 325px) and (max-width : 480px){
+.playagainbutton{
+font-size: 15px;
+margin-left: -35vh;
+padding: 1px 5px 1px 5px;
+height: 40px;
+width: 150px;
+margin-top: 50vh;
+}
+/* responsiveness for playagain button */
+.body3{
+   width: 100%;
+   height: 100vh;
+   background-image: url(./last\ page.png);
+   background-size: cover;
+}
+/* responsiveness for background */
+#score{
+    font-size: 20px;
+}
+/* responsiveness to score */
+.bird{
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+}
+/* responsiveness to bird image */
+.cherry{
+    height: 60px;
+    width: 60px;
+}
+/* responsiveness to cherry image */
+#number{
+    font-size: 20px;
+    margin-top: 50px;
+}
+/* responsiveness to your score */
+#appreciate{
+    font-size: 15px;
+}
+/* responsiveness to appreciate */
+#cake{
+    margin-left: 10px;
+    height: 300px;
+    width: 300px;
+}
+/* responsiveness to cake image */
+#volumebtn{
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+/* responsiveness to volume button */
+}

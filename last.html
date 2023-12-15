@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="last.css" />  
+    <!-- connecting css file -->
+    <title>Cherry Chase</title>
+  </head>
+  <body class="body3">
+<div class="topView">
+    <img src="./volume-removebg-preview.png" alt="" height="30px" width="30px" id="volumebtn" >
+     <!-- creating a image tag for volume button -->
+    <div id="content" style="display: none;">
+      <audio id="music" src="last.mp3" style="display: none;" loop></audio>
+        <!-- adding background music in audio tag -->
+    </div>
+    <div id="loader" style="display: none;">
+    <p>Loading...</p>
+      <!-- adding loading content and adding a style to display none -->
+  </div>
+  <p id="score"></p>
+    <!-- creating empty para tag to display result sentence -->
+  <div id="compliment">
+    <p id="number"></p>
+    <!-- adding p tag to generate score  -->
+    <p id="appreciate"></p>
+     <!-- adding p tag to generate random compliments -->
+  </div>
+</div>
+    <div>
+        <img src="./bird-removebg-preview.png" alt="" height="210px" width="210px" class="bird">
+        <!-- giving bird image tag -->
+    </div>
+    <div>
+        <img src="./single_cherry-removebg-preview.png" alt="" height="100px" width="100px" class="cherry">
+        <!-- giving cherry image tag -->
+    </div>
+    <div class="chocolate">
+      <img src="./chocolate_cake-removebg-preview.png" alt="" height="350px" width="350px" id="cake">
+      <!-- image tag for cake picture  -->
+      <button class="playagainbutton">Play Again</button>
+    </div>
+    <!-- play again button tag -->
+ 
+    
+<script>  
+  // here starts java script code
+    let resultDisplay = document.getElementById("score"); //Accessing para tag .
+    resultDisplay.innerHTML = localStorage.getItem("status");  //getting score from local storage and displaying it in para tag.
+
+    let btnPlayAgain = document.querySelector(".playagainbutton") //Accessing play again button.
+    btnPlayAgain.addEventListener("click",function(){     //Creating a function to switch the pages.
+        window.location.href = "./index.html"
+    })
+
+let bird = document.querySelector(".bird");  //Accessing bird image
+let cherry = document.querySelector(".cherry"); //Accessing cherry image
+
+const volumebtn = document.getElementById("volumebtn");  //Accessing the volume button from html.
+const loader = document.getElementById("loader");   //Accessing the loader from html.
+const music = document.getElementById("music");    //Accessing the audio tag from html.
+var letsplayMusic = false;
+
+volumebtn.addEventListener("click", () => {    //Adding click event listner to volume button.
+  if(letsplayMusic==true){
+    music.pause()
+    letsplayMusic = false;
+    volumebtn.src = "./mute.png"  //Changing the display of volume symbol to mute symbol.
+  }
+  
+  else{
+  music.play().then(() => {
+    loader.style.display = "none";
+    letsplayMusic = true;
+    volumebtn.src = "./volume-removebg-preview.png"  //Changing the display of mute symbol to volume symbol.
+  })
+}
+})
+
+
+    function flyawayBird(){       //Creating a fuction to fly the bird without cherry.
+        bird.style.animation = "flyaway 4s linear";
+        cherry.style.visibility = "hidden";
+        console.log("loose")
+    }
+let number = document.getElementById("number");  //Accessing empty p tag.
+let compliments = document.getElementById("appreciate"); //Accessing empty p tag.
+displayName = localStorage.getItem("input1");  //Getting username from local storage and storing it in a variable.
+let appreciate = [
+"🍰 Victory is sweet, and you've earned it! 🏅",  //Creating a array to display random compliments when, user won. 
+  "👏 A round of applause for the victorious! 🎉",
+  "🔥 You're on fire! Victory is in your hands! 🏆",
+  "🎉 Hip, hip, hooray! You've won the day! 🥳",
+  "🏆 Woo-hoo! You're the reigning champion! 🎊",
+  "🌈 Magnificent! You've claimed the victory! 🏅",
+  "👍 You're the best! Victory suits you! 🎉",
+  "🎊 The triumph is yours! Celebrate the win! 🏆",
+  "🌟 Well played! You're the ultimate winner! 👑"
+];
+let letsTry = [
+"🌪️ Dust yourself off. The next victory is around the corner!", //Creating a array to display the random sentences when user lost the game.
+  "🚶‍♂️ It's okay to stumble; what matters is getting back up!",
+  "⚖️ Balance is the key. Ups and downs are part of the journey!",
+  "🌦️ After the rain comes the rainbow. Your rainbow is coming!",
+  "😕 Keep your spirits high. The best is yet to come!",
+  "🌌 The night is darkest just before the dawn. A new day awaits!",
+  "💪 Resilience is your superpower. You'll rise again!",
+  "🌈 Embrace the journey, including its challenges. You're on the right path!",
+  "🌟 Remember, the stars shine brightest in the darkest nights. Shine on!"
+]
+
+if ( resultDisplay.innerHTML == "Wow!! You have cherry on your cake.You found the cherry."){
+    document.addEventListener("DOMContentLoaded",function(){
+        bird.style.animation = "flyaway 4s linear";    //If the user won then this function is called which makes bird to drop the cherry.
+        cherry.style.animation = "fly 4s linear forwards,stay 4s forwards";
+        cherry.style.visibility = "visible";
+        console.log("win")
+        number.innerHTML = "Your Score:"+localStorage.getItem("score");  //This line generates the score from local storage.
+        const randomAppreciation = appreciate[Math.floor(Math.random()*appreciate.length)];   //This generates random index for array of appreciate and stores the sentence in variable .
+        compliments.innerHTML = randomAppreciation + displayName;  // This line concates the compliment with username.
+    });
+}
+else if (resultDisplay.innerHTML == "Oops! You did not have cherry on your cake.You lost the cherry."){
+    document.addEventListener("DOMContentLoaded",flyawayBird);  //If the user lost the game this function is called to make bird fly.
+    number.innerHTML = "Your Score:"+localStorage.getItem("score"); //This line generates the score from local storage.
+    const randomTry = letsTry[Math.floor(Math.random()*letsTry.length)];  //This generates random index for array of try and stores the sentence in variables.
+    compliments.innerHTML = randomTry + displayName;    // This line concates the randomTry with username.
+}
+
+  </script>
+  </body>
+</html>

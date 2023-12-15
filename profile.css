@@ -1,0 +1,78 @@
+.box{
+    padding: 50px 150px 50px 150px;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+/* styling for the box which contains the both inputs. */
+#name{
+    margin-bottom: 50px;
+    height: 20px;
+    width: 300px;
+}
+/* styling for first input box */
+body {
+    background-image: url(cherry\ background.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+    margin: 0;
+    padding: 0;
+  }
+  /* giving background image */
+#nickname{
+    margin-right: 700px;
+    margin-bottom: 50px;
+    height: 20px;
+    width: 300px;
+}
+/* styling for second input box */
+.playbutton{
+    padding: 10px 20px 10px 20px;
+    font-size:25px;
+    background-color: rgb(243, 175, 1);
+    color: black;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 90px;
+}
+/* styling for play button */
+/* makes responsive */
+@media only screen and (min-width : 325px) and (max-width : 480px){
+body{
+    width: 100%;
+    height: 300vh;
+}
+/* responsiveness to body */
+.box{
+   height: 200px;
+   width: -40px;
+   margin-left: 100%;
+   margin-top: -85%;
+}
+/* responsiveness to box */
+#name{
+    margin-bottom: 10px;
+    height: 20px;
+    width: 120px;
+}
+/* responsiveness to name input */
+#nickname{
+    height: 20px;
+    width: 120px;
+}
+/* responsiveness to nickname input */
+.playbutton{
+    padding: 10px 20px 10px 20px;
+    font-size:15px;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+/* responsiveness to play button */
+}

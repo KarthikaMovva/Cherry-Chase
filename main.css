@@ -1,0 +1,228 @@
+.body2{
+    margin: 0;
+    padding: 0;
+    background-image: url(./Cherry\ Chase\ main\ page.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* giving back ground image */
+.startbutton{
+    padding: 10px 20px 10px 20px;
+    font-size:25px;
+    background-color: rgb(238, 44, 44);
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-left: 1200px;
+    margin-top: 120px;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+}
+/* start button styling */
+.shufflebutton{
+    padding: 10px 20px 10px 20px;
+    font-size:25px;
+    background-color: rgb(238, 44, 44);
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-left: 1200px;
+    margin-top: 60px;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+    display: none; 
+}
+/* shuffle button styling */
+.topView{
+    display: flex;
+}
+/* styling for both volume button and instructions */
+.instruction{
+    margin-left: 110px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: Verdana, sans-serif;
+    color: rgb(238, 44, 44);
+}
+/* styling for instructions */
+#volumebtn{
+    cursor: pointer;
+    position: absolute;
+    margin-top:40px;
+    margin-left: 20px;
+}
+/* volume button styling */
+.chooseBasket{
+    display: flex;
+    position: relative;
+}
+.baskets{
+    position: relative; 
+    top: 250px;
+    cursor: pointer;   
+}
+/* styling for baskets */
+.bird{
+    top: 100px;
+    left: 0;
+    position: absolute;
+}
+/* bird image styling */
+.cherry{
+    top: 145px;
+    left: 50px;
+    position: absolute;
+}
+/* cherry image styling */
+.basket3{
+    left: 530px;
+    position: absolute;
+}
+.basket2{
+    left: 780px;
+    position: absolute;
+}
+/* individual basket stylings */
+ @keyframes swap {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-300px); }
+}
+
+@keyframes swapReverse {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(470px); }
+}
+/* animation for baske2 and basket3 */
+@keyframes fly{
+    100%{left: 100%;}
+}
+/* animation for bird */
+@keyframes drop{
+    100%{top: 80%;}
+}
+/* animation for drpping cherry */
+
+@keyframes basket4move{
+    0%{transform: translate(0,0);}
+    50%{transform: translate(-255px,255px);}
+    100%{transform: translate(-550px,0);}
+}
+@keyframes basket1move{
+    0%{transform: translate(0,0);}
+    50%{transform: translate(255px,-255px);}
+    100%{transform: translate(550px,0);}
+}
+/* animation for basket1 and basket4. */
+.basket1-moves{
+    animation: basket1move 1s forwards;
+    position: absolute;
+    left: 200px;
+}
+/* This class is added on clicking the shuffle button and then animations will take place */
+.basket4-moves{
+    animation: basket4move 1s forwards;
+    position: absolute;
+    left: 700px;
+}
+/* This class is added on clicking the shuffle button and then animations will take place */
+/* here starts responsive code */
+@media only screen and (min-width : 325px) and (max-width : 480px){
+  .instruction{
+    font-size: 70%;
+    margin-right: 10px;
+  }  
+  /* responsiveness for instructions */
+  .basket1{
+    margin-top: 100px;
+    position: absolute;
+  }
+  /* responsiveness for basket1 */
+  #volumebtn{
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+  }
+  /* responsiveness for volume button */
+  .body2{
+    width: 100%;
+    height: 100vh;
+  }
+  /* responsiveness for background */
+  .bird{
+    height: 70px;
+    width: 70px;
+  }
+  /* responsiveness for bird image */
+  .cherry{
+    height: 20px;
+    width: 20px;
+  }
+  /* responsiveness for cheerry image */
+  .basket1{
+    height: 100px;
+    width: 100px;
+    left: 4vh;
+    top: 20vh;
+  }
+  /* responsiveness for basket1 */
+  .basket2{
+    height: 100px;
+    width: 100px;
+    left: 15vh;
+    top: 35vh;
+  }
+  /* responsiveness for basket2 */
+  .basket3{
+    height: 100px;
+    width: 100px;
+    left: 25vh;
+    top: 35vh;
+  }
+  /* responsiveness for basket3 */
+  .basket4{
+    height: 100px;
+    width: 100px;
+    left: 35vh;
+    top: 35vh;
+  }
+  /* responsiveness for basket4  */
+  .choosebasket{
+    display: flex;
+  }
+  /* styling for the div containing 4baskets */
+  .startbutton{
+    margin-left: 200px;
+    font-size: 10px;
+  }
+  /* responsiveness for start button */
+  .shufflebutton{
+    margin-left: 200px;
+    font-size: 10px;
+  }
+  /* responsiveness for shuffle button */
+  @keyframes swap {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20vh); }
+  }
+  @keyframes swapReverse {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-10vh); }
+  }
+  /* responsiveness for animation of basket2 and basket3 */
+  @keyframes basket4move{
+    0%{transform: translate(0,0);}
+    50%{transform: translate(5vh,5vh);}
+    100%{transform: translate(-140vh,0);}
+  }
+  @keyframes basket1move{
+    0%{transform: translate(0,0);}
+    50%{transform: translate(25vh,25vh);}
+    100%{transform: translate(-10vh,0);}
+}
+/* responsiveness for animation of basket1 and basket4 */
+@keyframes drop{
+  100%{top: 70%;}
+}
+/* responsiveness for droping cherry animation  */
+}
