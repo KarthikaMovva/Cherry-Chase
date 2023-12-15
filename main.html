@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <!-- connecting css file -->
+    <title>Cherry Chase</title>
+</head>
+<body class="body2">
+<div class="topView">
+    <p class="instruction">Observe the bird and the cherry after clicking the start button cherry is dropped into first basket.</p>
+    <!-- a para tag for instructions. -->
+    <img src="./volume-removebg-preview.png" alt="" height="30px" width="30px" id="volumebtn" >
+     <!-- creating a image tag for volume button -->
+  <div id="content" style="display: none;">
+    <audio id="music" src="main bg music.mp3" style="display: none;" loop></audio>
+     <!-- adding background music in audio tag -->
+  </div>
+  <div id="loader" style="display: none;">
+  <p>Loading...</p>
+   <!-- adding loading content and adding a style to display none -->
+</div>
+</div>
+    <div>
+        <img src="./bird-removebg-preview.png" alt="" height="150px" width="150px" class="bird">
+        <!-- giving bird image tag -->
+    </div>
+    <div>
+        <img src="./single_cherry-removebg-preview.png" alt="" height="100px" width="100px" class="cherry">
+        <!-- giving cherry image tag -->
+    </div>
+    <button class="startbutton">START</button>
+    <button class="shufflebutton">SHUFFLE</button>
+       <!-- giving button tags for both shuffle and start buttons -->
+    <div class="chooseBasket">
+        <div class="choosen option1" >
+            <img src="./basket-removebg-preview (1).png" id="select" alt="" class="basket1 baskets" height="300px" width="300px">
+        </div>
+        <div class="choosen option2">
+            <img src="./basket-removebg-preview (1).png"  alt="" id="second1" class="basket2 baskets" height="300px" width="300px">
+        </div>
+        <div class="choosen option3">
+            <img src="./basket-removebg-preview (1).png" alt="" id = "second2" class="basket3 baskets" height="300px" width="300px">
+        </div>
+        <div class="choosen option4">
+            <img src="./basket-removebg-preview (1).png" alt="" class="basket4 baskets" height="300px" width="300px">
+        </div>
+        <!-- 4 basket images -->
+    </div>
+    <script src="main.js"></script>
+    <!-- connecting java script file -->
+</body>
+</html>
