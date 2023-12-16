@@ -15,10 +15,6 @@
       <audio id="music" src="last.mp3" style="display: none;" loop></audio>
         <!-- adding background music in audio tag -->
     </div>
-    <div id="loader" style="display: none;">
-    <p>Loading...</p>
-      <!-- adding loading content and adding a style to display none -->
-  </div>
   <p id="score"></p>
     <!-- creating empty para tag to display result sentence -->
   <div id="compliment">
@@ -58,7 +54,6 @@ let bird = document.querySelector(".bird");  //Accessing bird image
 let cherry = document.querySelector(".cherry"); //Accessing cherry image
 
 const volumebtn = document.getElementById("volumebtn");  //Accessing the volume button from html.
-const loader = document.getElementById("loader");   //Accessing the loader from html.
 const music = document.getElementById("music");    //Accessing the audio tag from html.
 var letsplayMusic = false;
 
@@ -70,13 +65,11 @@ volumebtn.addEventListener("click", () => {    //Adding click event listner to v
   }
   
   else{
-  music.play().then(() => {
-    loader.style.display = "none";
+  music.play()
     letsplayMusic = true;
     volumebtn.src = "./volume-removebg-preview.png"  //Changing the display of mute symbol to volume symbol.
-  })
-}
-})
+ } });
+
 
 
     function flyawayBird(){       //Creating a fuction to fly the bird without cherry.

@@ -1,5 +1,4 @@
 const volumebtn = document.getElementById("volumebtn");
-const loader = document.getElementById("loader");
 const music = document.getElementById("music");
 var letsplayMusic = false;
 //Background music on and off using if and else conditions.
@@ -10,13 +9,10 @@ volumebtn.addEventListener("click", () => {   //Adding click event listner to vo
     volumebtn.src = "./mute.png";    //Changing the display of volume symbol to mute symbol.
   }
   else{
-  music.play().then(() => {
-    loader.style.display = "none";
+  music.play()
     letsplayMusic = true;
     volumebtn.src = "./volume-removebg-preview.png";  //Changing the display of mute symbol to volume symbol.
-  }
-  )};
-});
+  }});
 
 let startButton = document.getElementsByClassName("startbutton")[0]; //Accessing the strat nad shuffle buttons.
 let shuffleButton = document.querySelector(".shufflebutton");

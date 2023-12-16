@@ -20,7 +20,6 @@ loginButton.addEventListener("mouseout",mouseoutColor);
 
 
 const volumebtn = document.getElementById("volumebtn"); //Accessing the volume button from html.
-const loader = document.getElementById("loader"); //Accessing the loader from html.
 const music = document.getElementById("music");  //Accessing the audio tag from html.
 var letsplayMusic = false;                     //Creating letsplayMusic variable and assigning the boolean value to variable. This helps in finding the music is either playing or in pause.
 
@@ -31,12 +30,8 @@ volumebtn.addEventListener("click", () => {   //Adding click event listner to vo
     volumebtn.src = "./mute.png"  //Changing the display of volume symbol to mute symbol.
   }
   else{                          //if the boolean value of letsplayMusic is false then it indicates music is in pause.
-  music.play().then(() => {      //Starts to play music while playing music the arrow fuction is called.
-  
-    loader.style.display = "none";   //If the music is loading then it will display loading text.So, to avoid it we are assigning a style to display none.
+  music.play()      //Starts to play music while playing music the arrow fuction is called.
     letsplayMusic = true;            //Changing the boolean value to true. because, now music is playing.
     volumebtn.src = "./volume-removebg-preview.png"   //Changing the display of mute symbol to volume symbol.
 
-  }
-  )};
-});
+  }});
