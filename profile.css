@@ -52,8 +52,8 @@ body{
 /* responsiveness to body */
 .box{
    height: 200px;
-   width: -40px;
-   margin-left: 100%;
+   width: -20px;
+   margin-left: 600px;
    margin-top: -85%;
 }
 /* responsiveness to box */

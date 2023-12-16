@@ -51,6 +51,9 @@
     position: absolute;
     margin-top:40px;
     margin-left: 20px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+    background-color: white;
 }
 /* volume button styling */
 .chooseBasket{

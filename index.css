@@ -29,6 +29,9 @@
     position: absolute;
     margin-top: -370px;
     margin-left: 580px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+    background-color: white;
   /* gives volume button styling */  
 }
 /* makes responsive */
@@ -47,9 +50,8 @@
     margin-left: 100px;
   }
   /* responsiveness to loginbutton */
-  .volumebtn{
-    margin-top: 10vh;
-    margin-left: 0;
+  #volumebtn{
+    left: 10px;
   }
   /* responsiveness to volume button */
 }

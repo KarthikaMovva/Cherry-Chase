@@ -25,7 +25,7 @@
     color: white;
     font-size: 40px;
     font-weight: 500;
-    margin-left: 50px;
+    margin-left: 70px;
     font-family: Verdana, sans-serif;
     position: relative;
 }
@@ -58,6 +58,9 @@
     position: absolute;
     margin-top: 8px;
     margin-right: 580px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+    background-color: white;
 }
 /* volume button styling */
 #number{
